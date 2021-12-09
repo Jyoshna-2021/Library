@@ -4,8 +4,8 @@ const {usertable,transcationdetails,Bookdetails}=require ("../models");
 var gettranscation = async (req, resp)=> {
     try{
         const UserId = req.params.UserId;
-        const gettranscation= await transcationdetails.findAll({where:{UserId:UserId}});
-        return resp.status(200).json(gettranscation)
+        const gettranscations= await transcationdetails.findAll({where:{UserId:UserId}});
+        return resp.status(200).json(gettranscations)
     
     }catch(e){
         console.log(e) 
@@ -19,8 +19,8 @@ var posttranscation= async(req,resp)=>{
         const validation=await transcationdetails.findOne({where:{UserId:UserId,BookId:BookId}})
         if(validation === null){
         console.log(validation)
-        const gettranscation= await transcationdetails.create( {UserId,BookId,BookName,IssueDate,duedate,renewdate});
-        return resp.status(200).json(gettranscation)}
+        const posttranscations= await transcationdetails.create( {UserId,BookId,BookName,IssueDate,duedate,renewdate});
+        return resp.status(200).json(posttranscations)}
     }
     catch(e){
         return resp.status(500).json({"message":e})
