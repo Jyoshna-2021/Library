@@ -1,0 +1,25 @@
+
+h2{
+    text-align: center;
+    color: #097971;
+}
+#heading td, #heading th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+#heading{
+    font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+#heading th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    
+  }
+.tscTable{
+    background-color: #ebf6f675;
+}
