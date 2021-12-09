@@ -49,7 +49,7 @@ var posttranscation= async(req,resp)=>{
         const duedate= await db.sequelize.query(`UPDATE transcationdetails SET duedate= date_add(renewdate,INTERVAL 16 DAY) WHERE UserId= ${UserId} AND BookId=${BookId}`);
 
           //  await bookupdate.save();
-    
+        
         return resp.status(200).json(duedate);
      }catch(e){
          console.log(e);
